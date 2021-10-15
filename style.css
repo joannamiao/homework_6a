@@ -261,13 +261,23 @@ z-index:0;
 .amountButton{
   background-color:transparent;
   border: none;
-  color:white;
+  color:black;
+  background-color:white;
   font-weight: 500;
   font-size: 25px;
+  border-radius: 20px;
+  padding:5px auto;
+  margin:5px;
 }
 
 #amount{
   margin-left:30%;
+}
+
+#rollCount{
+  font-size: 25px;
+  font-weight:500px;
+  font-family : 'Avenir';
 }
 
 .addToCart{

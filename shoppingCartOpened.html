@@ -10,7 +10,7 @@
     <div class="overlay">
         <div class="topnav">
             <div class="topnav-right">
-                <a id="cartWithCount" href="shoppingCartOpened.html">
+                <a id="cartWithCount" href="shoppingCart.html" >
                     <input type="image" src="./img/shoppingCart.png" id="updatedCartImg" class= "selectedCart" title="Shopping Cart"  alt="Shopping Cart of items to order">
                     <h6 id="orderCount">1</h6>
                 </a>
@@ -26,6 +26,23 @@
             </div>
           </div>  
         </div><br><br>
+
+        <div id="cartList">
+            <div id="cartTitle">
+                <span id="close" class="close">&times;</span>
+                <h2 id="titleName">Checkout</h2>
+            </div>
+            <div class="order">
+                <img src="./img/roll1.jpg" class="cartImg" title="Blackberry" alt="Blackberry Bun">
+                <div class="orderItemInfo">
+                    <h3>Blackberry Roll</h3>
+                    <h4 class="glazingTitle">Glazing:</h4>
+                    <h4 class="glazingTitle">Sugar-Milk</h4>
+                </div>
+                <h2 class="rollCount" id="rollCount1">x3</h2>
+            </div>
+            <button class = "placeOrder" type="button">Place Order</button>
+        </div>
 
         <h2 class="sectionTitle">New This Season:</h2>
         <div class="grid-container grid-container1">
@@ -53,29 +70,6 @@
                     </div>
                 </div>
             </div><br>
-        </div>
-
-        <div id="productDetail">
-            <span class="close">&times;</span>
-            <h2 class="popUpTitle">Blackberry</h2>
-            <h3 class="popUpTitle">$3.25</h3>
-            <button class="accordion label1">Ingredients: </button>
-            <div class="panel">
-                <p>Flour, Sugar, Blackberry, Baking Soda</p>
-            </div><br>
-            <div id="select">
-                <label class ="label1" for="glazings">Select a Glazing:</label>
-                <select id="glazings" name="glazings" class="label1" onchange="selectGlazing()">
-                <option value="sugarMilk">Sugar-Milk</option>
-                <option value="vanillaMilk">Vanilla-Milk</option>
-                <option value="doubleChoco">Double-Chocolate</option>
-                <option value="none">None</option>
-                </select>
-                <button class = "amountButton" id="amount" type="button" onclick="removeRoll()">-</button>
-                <a id = "rollCount"> 0</a>
-                <button class = "amountButton" type="button" onclick = "addRoll()">+</button>
-            </div>
-            <button class = "addToCart" type="button" onclick= "addToCart()">Add to Cart</button>
         </div>
 
         <div class="grid-container grid-container1">

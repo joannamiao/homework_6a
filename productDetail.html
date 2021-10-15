@@ -3,6 +3,8 @@
 <head>
 <link rel="stylesheet" href="style.css">
 <title>Bun Bun Bakeshop</title>
+<meta name="keywords" content="HTML, JavaScript">
+<script src="script.js"></script>
 </head>
 <body>
 
@@ -62,17 +64,17 @@
             </div><br>
             <div id="select">
                 <label class ="label1" for="glazings">Select a Glazing:</label>
-                <select id="glazings" name="glazings" class="label1">
+                <select id="glazings" name="glazings" class="label1" onchange="selectGlazing()">
                 <option value="sugarMilk">Sugar-Milk</option>
                 <option value="vanillaMilk">Vanilla-Milk</option>
                 <option value="doubleChoco">Double-Chocolate</option>
                 <option value="none">None</option>
                 </select>
-                <button class = "amountButton" id="amount" type="button">-</button>
-                <input type="text" name="amount">
-                <button class = "amountButton" type="button">+</button>
+                <button class = "amountButton" id="amount" type="button" onclick="removeRoll()">-</button>
+                <a id = "rollCount"> 0</a>
+                <button class = "amountButton" type="button" onclick = "addRoll()">+</button>
             </div>
-            <button class = "addToCart" type="button">Add to Cart</button>
+            <button class = "addToCart" type="button" onclick= "addToCart()">Add to Cart</button>
         </div>
 
         <div class="grid-container grid-container1">
