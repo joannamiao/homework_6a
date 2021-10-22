@@ -60,7 +60,7 @@
   max-width:50%;
   margin-left:10%;
   position: absolute; 
-  top: 10; right: 0; width: 200%; text-align:right;
+  top: 15px; right: 0; width: 200%; text-align:right;
 }
 
 .selectedCart{
@@ -266,7 +266,6 @@ z-index:0;
   font-weight: 500;
   font-size: 25px;
   border-radius: 20px;
-  padding:5px auto;
   margin:5px;
 }
 
@@ -276,7 +275,7 @@ z-index:0;
 
 #rollCount{
   font-size: 25px;
-  font-weight:500px;
+  font-weight:500;
   font-family : 'Avenir';
 }
 
