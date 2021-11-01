@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<title>Bun Bun Bakeshop</title>
+<meta name="keywords" content="HTML, JavaScript">
+<script src="script.js"></script>
+</head>
+<body>
+
+    <div class="overlay">
+        <div class="topnav">
+            <div class="topnav-right">
+                <a href="shoppingCartOpened.html" >
+                    <input type="image" src="./img/shoppingCart.png" id="cartImg" title="Shopping Cart"  alt="Shopping Cart of items to order">
+                </a>
+                <a href="#aboutUs">About Us</a>
+                <a href="#contact">Contact</a>
+                <a href="productBrowsing.html">Menu</a>
+            </div>
+            <div class="logoHolder" >
+                <a href="index.html">
+                    <img src="./img/logo.png" id="logoImg" title="Bun Bun Bakeshop"  alt="The Bun Bun Bakeshop logo">
+                </a>
+                <h2 id="storeName">Bun Bun Bakeshop</h2>
+            </div>
+          </div>  
+        </div><br><br>
+        <h2 class="sectionTitle">New This Season:</h2>
+        <div class="grid-container grid-container1">
+            <div class="grid-item">
+                <div class="picture-gallery">
+
+                    <div class="imgHolder">
+                    <img src="./img/roll1.jpg" class="galleryImg" title="Blackberry" alt="Blackberry Bun">
+                    <div class="caption">Blackberry Roll</div>
+                    </div>
+
+                    <div class="imgHolder">
+                    <img src="./img/roll1.jpg" class="galleryImg" title="Blackberry" alt="Blackberry Bun">
+                    <div class="caption">Blackberry Roll</div>
+                    </div>
+
+                    <div class="imgHolder">
+                    <img src="./img/roll1.jpg" class="galleryImg" title="Blackberry" alt="Blackberry Bun">
+                    <div class="caption">Blackberry Roll</div>
+                    </div>
+
+                    <div class="imgHolder">
+                        <img src="./img/roll1.jpg" class="galleryImg" title="Blackberry" alt="Blackberry Bun">
+                        <div class="caption">Blackberry Roll</div>
+                    </div>
+                </div>
+            </div><br>
+        </div>
+
+        <div id="productDetail">
+            <span class="close">&times;</span>
+            <h2 class="popUpTitle">Blackberry</h2>
+            <h3 class="popUpTitle">$3.25</h3>
+            <button class="accordion label1">Ingredients: </button>
+            <div class="panel">
+                <p>Flour, Sugar, Blackberry, Baking Soda</p>
+            </div><br>
+            <div id="select">
+                <label class ="label1" for="glazings">Select a Glazing:</label>
+                <select id="glazings" name="glazings" class="label1" onchange="selectGlazing()">
+                <option value="sugarMilk">Sugar-Milk</option>
+                <option value="vanillaMilk">Vanilla-Milk</option>
+                <option value="doubleChoco">Double-Chocolate</option>
+                <option value="none">None</option>
+                </select>
+                <button class = "amountButton" id="amount" type="button" onclick="removeRoll()">-</button>
+                <a id = "rollCount"> 0</a>
+                <button class = "amountButton" type="button" onclick = "addRoll()">+</button>
+            </div>
+            <button class = "addToCart" type="button" onclick= "addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="grid-container grid-container1">
+            <div class="grid-item">
+                <h2 class="sectionTitle">All Rolls:</h2>
+                <div class="picture-gallery">
+                    <div class="imgHolder">
+                    <img src="./img/roll1.jpg" class="galleryImg" title="Blackberry" alt="Blackberry Bun">
+                    <div class="caption">Blackberry Roll</div>
+                    </div>
+    
+                    <div class="imgHolder">
+                    <img src="./img/roll1.jpg" class="galleryImg" title="Blackberry" alt="Blackberry Bun">
+                    <div class="caption">Blackberry Roll</div>
+                    </div>
+    
+                    <div class="imgHolder">
+                    <img src="./img/roll1.jpg" class="galleryImg" title="Blackberry" alt="Blackberry Bun">
+                    <div class="caption">Blackberry Roll</div>
+                    </div>
+    
+                    <div class="imgHolder">
+                        <img src="./img/roll1.jpg" class="galleryImg" title="Blackberry" alt="Blackberry Bun">
+                        <div class="caption">Blackberry Roll</div>
+                    </div>
+    
+                    <div class="imgHolder">
+                        <img src="./img/roll1.jpg" class="galleryImg" title="Blackberry" alt="Blackberry Bun">
+                        <div class="caption">Blackberry Roll</div>
+                    </div>
+    
+                    <div class="imgHolder">
+                    <img src="./img/roll1.jpg" class="galleryImg" title="Blackberry" alt="Blackberry Bun">
+                    <div class="caption">Blackberry Roll</div>
+                    </div>
+    
+                    <div class="imgHolder">
+                    <img src="./img/roll1.jpg" class="galleryImg" title="Blackberry" alt="Blackberry Bun">
+                    <div class="caption">Blackberry Roll</div>
+                    </div>
+    
+                    <div class="imgHolder">
+                        <img src="./img/roll1.jpg" class="galleryImg" title="Blackberry" alt="Blackberry Bun">
+                        <div class="caption">Blackberry Roll</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<title>Bun Bun Bakeshop</title>
+<script src="script.js"></script>
+</head>
+<body>
+
+    <div class="overlay">
+        <div class="topnav">
+            <div class="topnav-right">
+                <a id="cartWithCount" href="shoppingCartOpened.html" >
+                    <input type="image" src="./img/shoppingCart.png" id="updatedCartImg" class= "selectedCart" title="Shopping Cart"  alt="Shopping Cart of items to order">
+                    <h6 id="orderCount">1</h6>
+                </a>
+                <a href="#aboutUs">About Us</a>
+                <a href="#contact">Contact</a>
+                <a href="productBrowsing.html">Menu</a>
+            </div>
+            <div class="logoHolder" >
+                <a href="index.html">
+                    <img src="./img/logo.png" id="logoImg" title="Bun Bun Bakeshop"  alt="The Bun Bun Bakeshop logo">
+                </a>
+                <h2 id="storeName">Bun Bun Bakeshop</h2>
+            </div>
+          </div>  
+        </div><br><br>
+
+        <div id="cartList">
+            <div id="cartTitle">
+                <span id="close" class="close">&times;</span>
+                <h2 id="titleName">Checkout</h2>
+            </div>
+            <div class="orders">
+                <div id="order1">
+                    <img src="./img/roll1.jpg" class="cartImg" title="Blackberry" alt="Blackberry Bun">
+                    <div class="orderItemInfo">
+                        <h3>Blackberry Roll</h3>
+                        <h4 class="glazingTitle">Glazing:</h4>
+                        <h4 class="glazingTitle">Sugar-Milk</h4>
+                        <h2 class="rollCount" id="rollCount1">x3</h2>
+                        <button class= "remomveOrderButton" id="1" onclick="removeItemFromCart(1)">Remove from Cart</button>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <button class = "placeOrder" type="button">Place Order</button>
+        </div>
+
+        <h2 class="sectionTitle">New This Season:</h2>
+        <div class="grid-container grid-container1">
+            <div class="grid-item">
+                <div class="picture-gallery">
+
+                    <div class="imgHolder">
+                    <img src="./img/roll1.jpg" class="galleryImg" title="Blackberry" alt="Blackberry Bun">
+                    <div class="caption">Blackberry Roll</div>
+                    </div>
+
+                    <div class="imgHolder">
+                    <img src="./img/roll1.jpg" class="galleryImg" title="Blackberry" alt="Blackberry Bun">
+                    <div class="caption">Blackberry Roll</div>
+                    </div>
+
+                    <div class="imgHolder">
+                    <img src="./img/roll1.jpg" class="galleryImg" title="Blackberry" alt="Blackberry Bun">
+                    <div class="caption">Blackberry Roll</div>
+                    </div>
+
+                    <div class="imgHolder">
+                        <img src="./img/roll1.jpg" class="galleryImg" title="Blackberry" alt="Blackberry Bun">
+                        <div class="caption">Blackberry Roll</div>
+                    </div>
+                </div>
+            </div><br>
+        </div>
+
+        <div class="grid-container grid-container1">
+            <div class="grid-item">
+                <h2 class="sectionTitle">All Rolls:</h2>
+                <div class="picture-gallery">
+                    <div class="imgHolder">
+                    <img src="./img/roll1.jpg" class="galleryImg" title="Blackberry" alt="Blackberry Bun">
+                    <div class="caption">Blackberry Roll</div>
+                    </div>
+    
+                    <div class="imgHolder">
+                    <img src="./img/roll1.jpg" class="galleryImg" title="Blackberry" alt="Blackberry Bun">
+                    <div class="caption">Blackberry Roll</div>
+                    </div>
+    
+                    <div class="imgHolder">
+                    <img src="./img/roll1.jpg" class="galleryImg" title="Blackberry" alt="Blackberry Bun">
+                    <div class="caption">Blackberry Roll</div>
+                    </div>
+    
+                    <div class="imgHolder">
+                        <img src="./img/roll1.jpg" class="galleryImg" title="Blackberry" alt="Blackberry Bun">
+                        <div class="caption">Blackberry Roll</div>
+                    </div>
+    
+                    <div class="imgHolder">
+                        <img src="./img/roll1.jpg" class="galleryImg" title="Blackberry" alt="Blackberry Bun">
+                        <div class="caption">Blackberry Roll</div>
+                    </div>
+    
+                    <div class="imgHolder">
+                    <img src="./img/roll1.jpg" class="galleryImg" title="Blackberry" alt="Blackberry Bun">
+                    <div class="caption">Blackberry Roll</div>
+                    </div>
+    
+                    <div class="imgHolder">
+                    <img src="./img/roll1.jpg" class="galleryImg" title="Blackberry" alt="Blackberry Bun">
+                    <div class="caption">Blackberry Roll</div>
+                    </div>
+    
+                    <div class="imgHolder">
+                        <img src="./img/roll1.jpg" class="galleryImg" title="Blackberry" alt="Blackberry Bun">
+                        <div class="caption">Blackberry Roll</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
