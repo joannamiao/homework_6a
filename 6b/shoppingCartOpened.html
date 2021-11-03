@@ -5,7 +5,7 @@
 <title>Bun Bun Bakeshop</title>
 <script src="script.js"></script>
 </head>
-<body>
+<body onload="showAllCartProducts()">
 
     <div class="overlay">
         <div class="topnav">
@@ -32,17 +32,20 @@
                 <span id="close" class="close">&times;</span>
                 <h2 id="titleName">Checkout</h2>
             </div>
-            <div class="orders">
-                <div id="order1">
-                    <img src="./img/roll1.jpg" class="cartImg" title="Blackberry" alt="Blackberry Bun">
-                    <div class="orderItemInfo">
-                        <h3>Blackberry Roll</h3>
-                        <h4 class="glazingTitle">Glazing:</h4>
-                        <h4 class="glazingTitle">Sugar-Milk</h4>
-                        <h2 class="rollCount" id="rollCount1">x3</h2>
-                        <button class= "remomveOrderButton" id="1" onclick="removeItemFromCart(1)">Remove from Cart</button>
+            <div id="orders">
+                <template id = "cartItemTemplate">
+                    <div id="order1">
+                        <img src="./img/roll1.jpg" class="cartImg" title="Blackberry" alt="Blackberry Bun">
+                        <div class="orderItemInfo">
+                            <h3 class="orderName">Blackberry Roll</h3>
+                            <h4 class="glazingTitle">Glazing:</h4>
+                            <h4 class="glazingType">Sugar-Milk</h4>
+                            <h2 class="rollCount" id="rollCount1">x3</h2>
+                            <button class= "removeOrderButton">Remove from Cart</button>
+                        </div>
                     </div>
-                </div>
+                </template>
+                
             </div>
             <br><br>
             <button class = "placeOrder" type="button">Place Order</button>

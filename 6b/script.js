@@ -16,46 +16,60 @@ function addRoll(){
 }
 
 var cartItems = 0
+const cart = []
+
+function Product(itemID, productName, productGlazing, productCount){
+    this.id = itemID
+    this.name = productName
+    this.glazing = productGlazing
+    this.count = productCount
+}
 
 function addToCart(){
+    var name = "Blackberry";
     var glazing = document.getElementById("glazings").options[document.getElementById("glazings").selectedIndex].text;
-    var rollCount = document.getElementById("rollCount").text;
-    newOrderInfo = document.createElement('div');
-    newOrderInfo.setAttribute("class","orderItemInfo");
-    newOrderName = document.createElement('h3');
-    newOrderName.innerHTML = "Blackberry Roll";
-    newOrderGlazingLabel = document.createElement('h4');
-    newOrderGlazingLabel.setAttribute("class","glazingTitle");
-    newOrderName.innerHTML = "Glazing:";
-    newOrderGlazing = document.createElement('h4');
-    newOrderGlazing.setAttribute("class","glazingTitle");
-    newOrderName.innerHTML = glazing;
-    newOrderCount = document.createElement('h2');
-    newOrderCount.setAttribute("class","rollCount");
-    newOrderName.innerHTML = rollCount;
-    newOrderDeleteButton = document.createElement('button');
-    newOrderDeleteButton.innerHTML = "Remove From Cart";
-    cartItems+=1;
-    newOrderDeleteButton.setAttribute("id",cartItems);
-    newOrderDeleteButton.setAttribute("id",cartItems);
-    newOrderInfo.appendChild(newOrderName);
-    newOrderInfo.appendChild(newOrderGlazingLabel);
-    newOrderInfo.appendChild(newOrderGlazing);
-    newOrderInfo.appendChild(newOrderCount);
-    newOrderInfo.appendChild(newOrderDeleteButton);
-    newOrder = document.createElement('div');
-    newOrder.setAttribute("id","order"+cartItems);
-    newOrderDeleteButton.onclick = function(clickedId){
-        var order = document.getElementById("order"+clickedId);
-        order.remove();
-    }
-    containerBlock = document.getElementsByClassName("orders");
-    // console.log(containerBlock);
-    // containerBlock.appendChild(newOrder);
+    var count = document.getElementById("rollCount").text;
+    const item = new Product(cartItems, name,glazing,count);
+    const storedValue = JSON.parse(localStorage.getItem('savedCart'));
+    const cart = storedValue ? storedValue : []
+    cart.push(item);
+    localStorage.setItem('savedCart', JSON.stringify(cart));
     location.href = "shoppingCart.html";
 }
 
-function removeItemFromCart(clickedId){
-    var order = document.getElementById("order"+clickedId);
-    order.remove();
+function showProductInCart(product){
+    const cartDiv = document.getElementById('orders');
+    const template = document.getElementById('cartItemTemplate');
+    const clone = template.content.cloneNode(true);
+    clone.querySelector('.orderName').innerText = product.name;
+    clone.querySelector('.glazingType').innerText = product.glazing;
+    clone.querySelector('.rollCount').innerText = product.count;
+    const button = clone.querySelector('.removeOrderButton');
+    button.addEventListener('click',function(){
+        removeItemFromCart(product);
+    })
+    cartDiv.appendChild(clone);
+}
+
+function showAllCartProducts(){
+    const storedValue = JSON.parse(localStorage.getItem('savedCart'));
+    const cart = storedValue ? storedValue : []
+    for(var i = 0; i < cart.length; i++){
+        showProductInCart(cart[i])
+    }
+}
+
+function removeItemFromCart(product){
+    const storedValue = JSON.parse(localStorage.getItem('savedCart'));
+    const cart = storedValue ? storedValue : []
+    var index = -1
+    for (var i = 0; i < cart.length; i++){
+        if (cart[i].name == product.name && cart[i].glazing == product.glazing && cart[i].count == product.count){
+            index = i;
+            break
+        }
+    }
+    cart.splice(index,1);
+    localStorage.setItem('savedCart', JSON.stringify(cart));
+    showAllCartProducts();
 }

@@ -221,6 +221,13 @@ z-index:0;
   color:white;
 }
 
+.popUpTitleName{
+  text-align:center;
+  font-family : 'Avenir';
+  font-size:30px;
+  color:white;
+}
+
 /* https://www.w3schools.com/howto/howto_js_accordion.asp */
 .accordion {
   background-color: #eee;
@@ -342,7 +349,7 @@ z-index:0;
   margin-left: 30%;
 }
 
-.remomveOrderButton{
+.removeOrderButton{
   background-color: #F88379;
   border: none;
   padding: 14px 20px;
@@ -367,6 +374,10 @@ z-index:0;
 }
 
 .glazingTitle{
+  font-weight: lighter;
+}
+
+.glazingType{
   font-weight: lighter;
 }
 
